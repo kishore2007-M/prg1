@@ -239,10 +239,6 @@ int main()
         cout<<"2.view Ticket\n";
         cout<<"3.search ticket\n";
         cout<<"4.cancel ticket\n";
-<<<<<<< HEAD
-        cout<<"5.Search Pnr\n";
-=======
->>>>>>> 1828dbde46219c41f412aff7bbdd86246504f2c4
         cout<<"5.exit\n";
 
         cout<<"\nEnter choice: ";
