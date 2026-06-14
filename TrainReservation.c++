@@ -12,10 +12,13 @@ class passenger
         int age;
         string ageCategory;
         string source;
+        string sourceDate;
         string designation;
+        string desigDate;
         char gender;
         string classtype;
         int fare=250;
+        int pnr;
 };
 vector<passenger>passengers;
 
@@ -47,10 +50,24 @@ void bookticket()
 
     cout<<"\nEnter the Source: ";
     cin>>p.source;
+   
+   
+   cout<<"\nEnter the Sourcedate: ";
+   cin>>p.sourceDate;
 
-    cout<<"\nEnter the designation: ";
+   
+   cout<<"\nEnter the designation: ";
     cin>>p.designation;
+   
+   
+   cout<<"\nEnter the Designation Date: ";
+    cin>>p.desigDate;
+    
+    //       calculate pnr numbner
 
+    cout<<"\nEnter the pnr number: ";
+    cin>>p.pnr;
+    
 
     cout<<"\nEnter the gender(M/F): ";
     cin>>p.gender;
@@ -122,14 +139,18 @@ void viewTickets()
     for(int i=0;i<passengers.size();i++)
     {
         cout<<"===========ticket==============";
+        
         cout<<"\nTicketno: "<< passengers[i].ticketno;
+        cout<<"\nPNR Number: "<<passengers[i].pnr;
         cout<<"\nname: "<< passengers[i].name;
         cout<<"\nAge: "<< passengers[i].age;
         cout<<"\nAge Category: "<< passengers[i].ageCategory;
         cout<<"\nGender: "<< passengers[i].gender;
         cout<<"\nClass Type:  "<<passengers[i].classtype;
         cout<<"\nsource: "<< passengers[i].source;
+        cout<<"\nSource Date: "<<passengers[i].sourceDate;
         cout<<"\ndesgination: "<< passengers[i].designation;
+        cout<<"\nDesignation date: "<<passengers[i].desigDate;
         cout<<"\n================================";
     }
     cout<<endl;
@@ -146,6 +167,8 @@ void searchticket()
         if(passengers[i].ticketno == ticketno)
         {
             cout<<"\nTicket Found.....";
+            cout<<"\nTicketno: "<< passengers[i].ticketno<<endl;
+            cout<<"\nPNR Number: "<<passengers[i].pnr<<endl;
             cout <<"\nName        : " << passengers[i].name << endl;
             cout <<"\nAge         : " << passengers[i].age << endl;
              cout<<"\nAge Category: "<< passengers[i].ageCategory<<endl;
